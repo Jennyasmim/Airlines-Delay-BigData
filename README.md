@@ -48,18 +48,16 @@ Com base na análise exploratória, identificamos vários insights:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Carregar dados
-df = pd.read_csv('data/processed/delay_data.csv')
+# Convertendo para Pandas para plotagem
+delay_stats_pd = delay_stats_per_carrier.toPandas()
 
-# Análise estatística descritiva
-summary_stats = df.describe()
-print(summary_stats)
-
-# Visualização de atrasos por motivo
-delays_by_reason = df.groupby('delay_reason')['delay_minutes'].sum()
-delays_by_reason.plot(kind='bar', title='Total de Atrasos por Motivo')
-plt.xlabel('Motivo de Atraso')
-plt.ylabel('Total de Minutos de Atraso')
+plt.figure(figsize=(12, 8))
+sns.barplot(x='UniqueCarrier', y='avg(DepDelay)', data=delay_stats_pd, palette='Set2')
+plt.xlabel('Companhia Aérea')
+plt.ylabel('Atraso Médio na Partida (minutos)')
+plt.title('Atraso Médio na Partida por Companhia Aérea')
+plt.xticks(rotation=45)
+plt.tight_layout()
 plt.show()
 ```
 
