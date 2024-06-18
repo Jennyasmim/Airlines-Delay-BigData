@@ -1,6 +1,6 @@
 # Airlines-Delay-BigData - README
  
-Este repositório contém análises de dados de vendas de uma empresa reais do setor de aviação, com o objetivo de extrair insights e subsidiar decisões estratégicas das compainhas áereas. Neste README, vou explicar o processo de análise, desde a coleta dos dados até os insights obtidos.
+Este repositório contém análises de dados de empresas reais do setor de aviação, com o objetivo de extrair insights e subsidiar decisões estratégicas das compainhas áereas. Neste README, vou explicar o processo de análise, desde a coleta dos dados até os insights obtidos.
 
 ---
 
